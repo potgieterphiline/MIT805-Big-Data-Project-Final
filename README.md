@@ -1,4 +1,4 @@
-# MIT805 Big Data Project – Part 2
+# MIT805 Big Data Project
 
 **Group 16**
 
