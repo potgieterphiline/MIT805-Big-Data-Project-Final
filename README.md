@@ -1,24 +1,21 @@
-# MIT805 Big Data Project – Part 2
+# Dataset: NYC Yellow Taxi Trip Records
 
-**Group 16**
+The data is not stored in this repository because of its size. Download it from the original source.
 
-## Group Members
+- Source: NYC Taxi and Limousine Commission (TLC), https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+- Terms of use: https://www.nyc.gov/home/terms-of-use.page
+- Data dictionary: https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf
 
-- Philine Potgieter
-- Tshwanelo Mathala
+Each month is one Parquet file named `yellow_tripdata_YYYY-MM.parquet`, which can be downloaded from the TLC page or from:
 
-## Project Overview
+```
+https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_YYYY-MM.parquet
+```
 
-This project uses PySpark to analyse NYC Yellow Taxi trip data from 2024 and 2025. It identifies night-time routes and zones with the lowest average travel speeds by transforming, grouping, and aggregating trip records across routes, locations, and time periods.
+Part 1 uses January 2014 to December 2025, and Part 2 uses January 2024 to December 2025. Part 2 also uses the zone lookup file, which turns zone numbers into names:
 
-The analysis demonstrates Spark’s distributed processing and DAG execution while providing insights into possible congestion, roadworks, and operational inefficiencies.
+```
+https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv
+```
 
-## Dataset
-
-The original NYC Taxi dataset was downloaded from the NYC TLC website.
-
-Dataset source: https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
-
-Raw Data Size: 29.66 GB Working Data Size: 12.93 GB Processed Data Size: 4.96 GB
-
-The raw dataset is not stored in GitHub because it exceeds the platform's file size limits.
+The download code is in `notebooks/[data collection notebook]`.
